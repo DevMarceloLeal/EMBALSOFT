@@ -1,0 +1,35 @@
+unit View.Formulario.Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, View.Frame.Cadastro, View.Frame.Total,
+  View.Frame.Consulta;
+
+type
+  TFrmPrincipal = class(TForm)
+    FrameCadastros1: TFrameCadastros;
+    FrameDados1: TFrameDados;
+    FrameTotal1: TFrameTotal;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmPrincipal.FormCreate(Sender: TObject);
+begin
+  Position := poDesktopCenter;
+  Text     := 'EmbalSoft Sistemas';
+end;
+
+end.

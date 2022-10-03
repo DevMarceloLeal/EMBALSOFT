@@ -1,0 +1,142 @@
+unit Model.Dados;
+
+interface
+
+uses
+  System.SysUtils,
+  Vcl.Forms,
+  Vcl.DBGrids,
+  Data.DB,
+  Datasnap.DBClient,
+  Auxiliar.Forms,
+  Auxiliar.Dialogos,
+  Auxiliar.DataGrid,
+  Auxiliar.Validacoes,
+  Auxiliar.Variaveis.Globais;
+
+type
+  TModelDados = class
+  private
+    FFrame: TFrame;
+    FDBGrid: TDBGrid;
+    FCds: TClientDataSet;
+    FDts: TDataSource;
+    function CriaTabela: TClientDataSet;
+    function CriaDataSource(pCdsData: TClientDataSet): TDataSource;
+    procedure DataGrid(pDbg: TDBGrid; pCds: TClientDataSet; pDts: TDataSource);
+    procedure LancarDados(pDbg: TDBGrid; pCds: TClientDataSet; Notificacao: TNotificacao);
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: TModelDados;
+    function Formulario(pFrame: TFrame): TModelDados;
+    function Dados: TModelDados;
+    procedure EfetuarLancamentos(Notificacao: TNotificacao);
+  end;
+
+const
+  // Configuração do DBGrid
+  aFields  : array[0..1] of String     = ('CODIGO', 'DESCRICAO');
+  aHeaders : array[0..1] of String     = ('Código', 'Descrição');
+  aWidths  : array[0..1] of Integer    = ( 70, 100);
+  aAligns  : array[0..1] of String     = ('Right', 'Left');
+  aTipos   : array[0..1] of TFieldType = (ftInteger, ftString);
+  aTamanho : array[0..1] of Integer    = ( 0, 150);
+
+implementation
+
+{ TModelDados }
+
+constructor TModelDados.Create;
+begin
+  FCds := CriaTabela;
+  FDts := CriaDataSource(FCds);
+end;
+
+destructor TModelDados.Destroy;
+begin
+  inherited;
+end;
+
+function TModelDados.CriaTabela: TClientDataSet;
+var
+  cdsData: TClientDataSet;
+  I: Integer;
+
+begin
+  cdsData := TClientDataSet.Create(nil);
+  for I := 0 to Length(aFields) - 1 do
+    cdsData.FieldDefs.Add(aFields[I], aTipos[I], aTamanho[I]);
+
+  cdsData.CreateDataSet;
+  cdsData.EmptyDataSet;
+  cdsData.Active := True;
+  Result := cdsData;
+end;
+
+function TModelDados.CriaDataSource(pCdsData: TClientDataSet): TDataSource;
+var
+  dtsData: TDataSource;
+
+begin
+  dtsData         := TDataSource.Create(nil);
+  dtsData.DataSet := pCdsData;
+  Result          := dtsData;
+end;
+
+procedure TModelDados.DataGrid(pDbg: TDBGrid; pCds: TClientDataSet; pDts: TDataSource);
+begin
+  pDbg.DataSource := pDts;
+  MontarGrid(pDbg, aFields, aHeaders, aAligns, aWidths);
+  FormataDataSet(pCds);
+end;
+
+procedure TModelDados.LancarDados(pDbg: TDBGrid; pCds: TClientDataSet; Notificacao: TNotificacao);
+var
+  FCodigo, FRegistros: Integer;
+  FDescricao: String;
+
+begin
+  FCodigo    := Notificacao.Codigo;
+  FDescricao := Notificacao.Descricao;
+
+  // Verifica se já existe algum registro com os dados digitados
+  if (pCds.Locate(aFields[0], FCodigo, [])) then
+     Msg('Já existe um registro cadastrado com este código [' + FCodigo.ToString + '] !!!', 3)
+  else if (pCds.Locate(aFields[1], FDescricao, [])) then
+     Msg('Já existe um registro cadastrado com esta descrição [' + FDescricao + '] !!!', 3)
+  else
+     begin
+       pCds.AppendRecord([FCodigo, FDescricao]);
+       if pCds.RecordCount = 2 then
+          DimensionarGrid(pDbg);
+     end;
+
+  FRegistros := pCds.RecordCount;
+  Notificacao.Registros := FRegistros;
+end;
+
+class function TModelDados.New: TModelDados;
+begin
+  Result := Self.Create;
+end;
+
+function TModelDados.Formulario(pFrame: TFrame): TModelDados;
+begin
+  Result  := Self;
+  FFrame  := pFrame;
+  FDBGrid := TDBGrid(Componente(FFrame, 40));
+end;
+
+function TModelDados.Dados: TModelDados;
+begin
+  Result := Self;
+  DataGrid(FDBGrid, FCds, FDts);
+end;
+
+procedure TModelDados.EfetuarLancamentos(Notificacao: TNotificacao);
+begin
+  LancarDados(FDBGrid, FCds, Notificacao);
+end;
+
+end.

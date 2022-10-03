@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/01/13 14:03:35.000.393,=C:\Users\leals\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/01/13 14:05:36.000.633,=C:\Users\leals\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/01/27 18:39:09.000.365,=C:\Users\leals\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/29 19:04:07.000.166,=C:\Users\leals\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/29 19:08:15.000.734,D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.Principal.dfm=C:\Users\leals\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/09/29 19:08:15.000.734,D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.Principal.pas=C:\Users\leals\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/29 19:08:33.000.437,D:\Delphi 11\EMBALSOFT\EMBALSOFT.dproj=C:\Users\leals\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/09/29 19:09:23.000.453,=D:\Delphi 11\EMBALSOFT\Unit1.pas</Transaction>
+    <Transaction>2022/09/29 19:10:08.000.837,D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.Frame.Cadastro.dfm=D:\Delphi 11\EMBALSOFT\Unit1.dfm</Transaction>
+    <Transaction>2022/09/29 19:10:08.000.837,D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.Frame.Cadastro.pas=D:\Delphi 11\EMBALSOFT\Unit1.pas</Transaction>
+    <Transaction>2022/09/29 19:10:28.000.228,D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.Formulario.Principal.pas=D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.Principal.pas</Transaction>
+    <Transaction>2022/09/29 19:10:28.000.228,D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.Formulario.Principal.dfm=D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.Principal.dfm</Transaction>
+    <Transaction>2022/09/29 19:23:39.000.612,=D:\Delphi 11\EMBALSOFT\Unit1.pas</Transaction>
+    <Transaction>2022/09/29 19:25:37.000.149,D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.Frame.Consulta.pas=D:\Delphi 11\EMBALSOFT\Unit1.pas</Transaction>
+    <Transaction>2022/09/29 19:25:37.000.149,D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.Frame.Consulta.dfm=D:\Delphi 11\EMBALSOFT\Unit1.dfm</Transaction>
+    <Transaction>2022/09/29 19:26:23.000.840,=D:\Delphi 11\EMBALSOFT\Unit2.pas</Transaction>
+    <Transaction>2022/09/29 19:30:19.000.596,D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.Frame.Total.pas=D:\Delphi 11\EMBALSOFT\Unit2.pas</Transaction>
+    <Transaction>2022/09/29 19:30:19.000.596,D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.Frame.Total.dfm=D:\Delphi 11\EMBALSOFT\Unit2.dfm</Transaction>
+    <Transaction>2022/09/29 20:57:05.000.614,=D:\Delphi 11\EMBALSOFT\SOURCE\AUXILIAR\Auxiliar.Dialogos.pas</Transaction>
+    <Transaction>2022/09/29 20:57:21.000.948,=D:\Delphi 11\EMBALSOFT\SOURCE\AUXILIAR\Auxiliar.Conversoes.pas</Transaction>
+    <Transaction>2022/09/29 20:57:21.000.895,=D:\Delphi 11\EMBALSOFT\SOURCE\AUXILIAR\Auxiliar.Controller.Global.pas</Transaction>
+    <Transaction>2022/09/29 20:57:22.000.050,=D:\Delphi 11\EMBALSOFT\SOURCE\AUXILIAR\Auxiliar.Forms.pas</Transaction>
+    <Transaction>2022/09/29 20:57:22.000.236,=D:\Delphi 11\EMBALSOFT\SOURCE\AUXILIAR\Auxiliar.Variaveis.Globais.pas</Transaction>
+    <Transaction>2022/09/29 20:57:22.000.126,=D:\Delphi 11\EMBALSOFT\SOURCE\AUXILIAR\Auxiliar.Fundo.Esmaecido.pas</Transaction>
+    <Transaction>2022/09/29 20:57:22.000.172,=D:\Delphi 11\EMBALSOFT\SOURCE\AUXILIAR\Auxiliar.Validacoes.pas</Transaction>
+    <Transaction>2022/09/29 20:57:22.000.006,=D:\Delphi 11\EMBALSOFT\SOURCE\AUXILIAR\Auxiliar.DataGrid.pas</Transaction>
+    <Transaction>2022/09/29 21:00:49.000.725,=D:\Delphi 11\EMBALSOFT\SOURCE\CONTROLLER\Controller.Factory.pas</Transaction>
+    <Transaction>2022/09/29 21:00:49.000.773,=D:\Delphi 11\EMBALSOFT\SOURCE\CONTROLLER\Controller.Interfaces.pas</Transaction>
+    <Transaction>2022/09/29 21:02:37.000.614,=D:\Delphi 11\EMBALSOFT\SOURCE\MODEL\Model.Observer.pas</Transaction>
+    <Transaction>2022/09/29 21:14:05.000.678,=D:\Delphi 11\EMBALSOFT\SOURCE\VIEW\View.BackTransparent.pas</Transaction>
+    <Transaction>2022/09/29 21:16:31.000.047,=D:\Delphi 11\EMBALSOFT\SOURCE\MODEL\Model.Operacoes.pas</Transaction>
+    <Transaction>2022/10/02 20:51:52.584,=D:\Delphi 11\EMBALSOFT\SOURCE\MODEL\Model.Agrupamentos.pas</Transaction>
+    <Transaction>2022/10/02 20:53:22.309,D:\Delphi 11\EMBALSOFT\SOURCE\MODEL\Model.Consulta.pas=D:\Delphi 11\EMBALSOFT\SOURCE\MODEL\Model.Agrupamentos.pas</Transaction>
+    <Transaction>2022/10/02 20:53:45.933,D:\Delphi 11\EMBALSOFT\SOURCE\MODEL\Model.Cadastro.pas=D:\Delphi 11\EMBALSOFT\SOURCE\MODEL\Model.Operacoes.pas</Transaction>
+    <Transaction>2022/10/02 21:35:15.372,D:\Delphi 11\EMBALSOFT\SOURCE\MODEL\Model.Dados.pas=D:\Delphi 11\EMBALSOFT\SOURCE\MODEL\Model.Consulta.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="SOURCE"/>
+    <File Path="SOURCE\AUXILIAR"/>
+    <File Path="SOURCE\AUXILIAR\Auxiliar.Controller.Global.pas"/>
+    <File Path="SOURCE\AUXILIAR\Auxiliar.Conversoes.pas"/>
+    <File Path="SOURCE\AUXILIAR\Auxiliar.DataGrid.pas"/>
+    <File Path="SOURCE\AUXILIAR\Auxiliar.Dialogos.pas"/>
+    <File Path="SOURCE\AUXILIAR\Auxiliar.Forms.pas"/>
+    <File Path="SOURCE\AUXILIAR\Auxiliar.Fundo.Esmaecido.pas"/>
+    <File Path="SOURCE\AUXILIAR\Auxiliar.Validacoes.pas"/>
+    <File Path="SOURCE\AUXILIAR\Auxiliar.Variaveis.Globais.pas"/>
+    <File Path="SOURCE\CONTROLLER"/>
+    <File Path="SOURCE\CONTROLLER\Controller.Factory.pas"/>
+    <File Path="SOURCE\CONTROLLER\Controller.Interfaces.pas"/>
+    <File Path="SOURCE\MODEL"/>
+    <File Path="SOURCE\MODEL\Model.Cadastro.pas"/>
+    <File Path="SOURCE\MODEL\Model.Dados.pas"/>
+    <File Path="SOURCE\MODEL\Model.Observer.pas"/>
+    <File Path="SOURCE\VIEW"/>
+    <File Path="SOURCE\VIEW\View.BackTransparent.pas"/>
+    <File Path="SOURCE\VIEW\View.BackTransparent.dfm"/>
+    <File Path="SOURCE\VIEW\View.Formulario.Principal.pas"/>
+    <File Path="SOURCE\VIEW\View.Formulario.Principal.dfm"/>
+    <File Path="SOURCE\VIEW\View.Frame.Cadastro.pas"/>
+    <File Path="SOURCE\VIEW\View.Frame.Cadastro.dfm"/>
+    <File Path="SOURCE\VIEW\View.Frame.Consulta.pas"/>
+    <File Path="SOURCE\VIEW\View.Frame.Consulta.dfm"/>
+    <File Path="SOURCE\VIEW\View.Frame.Total.pas"/>
+    <File Path="SOURCE\VIEW\View.Frame.Total.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

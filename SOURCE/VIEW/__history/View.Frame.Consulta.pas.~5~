@@ -1,0 +1,43 @@
+unit View.Frame.Consulta;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.Variants,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.StdCtrls,
+  Vcl.Grids,
+  Vcl.DBGrids,
+  Vcl.Buttons,
+  Vcl.ExtCtrls,
+  Auxiliar.Forms,
+  Auxiliar.Conversoes,
+  Auxiliar.Controller.Global,
+  Auxiliar.Variaveis.Globais,
+  Model.Consulta,
+  Data.DB;
+
+type
+  TFrameDados = class(TFrame)
+    dbgCadastros: TDBGrid;
+  private
+    FControle: TModelConsulta;
+  public
+    constructor Create(AOwner: TComponent) ; override;
+    destructor Destroy; override;
+    procedure Atualizar(Notificacao: TNotificacao);
+  end;
+
+implementation
+
+{$R *.dfm}
+
+end.

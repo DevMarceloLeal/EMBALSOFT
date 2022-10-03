@@ -1,0 +1,75 @@
+unit View.Formulario.Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, View.Frame.Cadastro, View.Frame.Total,
+  View.Frame.Consulta;
+
+type
+  TFrmPrincipal = class(TForm)
+    FrameCadastros1: TFrameCadastros;
+    FrameDados1: TFrameDados;
+    FrameTotal1: TFrameTotal;
+    procedure FormCreate(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure FormDestroy(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+  private
+    procedure Configurar_Ambiente;
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmPrincipal.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+  CanClose := Msg('Deseja Realmente Sair ?', 4);
+  if CanClose then
+     ModalResult := mrCancel
+  else
+     SetFoco(FrameCadastroOperacoes, 'edtCentroCustos');
+end;
+
+procedure TFrmPrincipal.FormCreate(Sender: TObject);
+begin
+  Configurar_Ambiente;
+end;
+
+procedure TFrmPrincipal.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  case Key of
+    Char(VK_ESCAPE):
+      begin
+        Key := #0;
+        Close;
+      end;
+
+    char(VK_RETURN):
+      begin
+        Key := #0;
+        keybd_event(VK_TAB, 0, 0, 0);
+      end;
+  end;
+end;
+
+procedure TFrmPrincipal.FormDestroy(Sender: TObject);
+begin
+  Application.Terminate;
+  TerminateProcess(GetCurrentProcess, 0);
+end;
+
+procedure TFrmPrincipal.Configurar_Ambiente;
+begin
+  Position := poDesktopCenter;
+  Text := 'EmbalSoft Sistemas';
+end;
+
+end.

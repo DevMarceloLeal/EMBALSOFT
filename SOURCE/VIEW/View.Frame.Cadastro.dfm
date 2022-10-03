@@ -1,0 +1,116 @@
+object FrameCadastros: TFrameCadastros
+  Left = 0
+  Top = 0
+  Width = 425
+  Height = 84
+  TabOrder = 0
+  PixelsPerInch = 96
+  object Label1: TLabel
+    Left = 13
+    Top = 16
+    Width = 65
+    Height = 20
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'C'#243'digo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Font.Quality = fqClearTypeNatural
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 13
+    Top = 47
+    Width = 65
+    Height = 20
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Descri'#231#227'o'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Font.Quality = fqClearTypeNatural
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 211
+    Top = 3
+    Width = 157
+    Height = 15
+    Caption = 'Para sair do sistema pressione'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Font.Quality = fqClearTypeNatural
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 371
+    Top = 3
+    Width = 51
+    Height = 15
+    AutoSize = False
+    Caption = '< ESC >'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    Font.Quality = fqClearTypeNatural
+    ParentFont = False
+    StyleElements = [seClient, seBorder]
+  end
+  object edtCodigo: TEdit
+    Left = 86
+    Top = 13
+    Width = 57
+    Height = 28
+    Alignment = taRightJustify
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Font.Quality = fqClearTypeNatural
+    ParentFont = False
+    TabOrder = 0
+    Text = 'edtCodigo'
+  end
+  object edtDescricao: TEdit
+    Left = 86
+    Top = 45
+    Width = 243
+    Height = 28
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Font.Quality = fqClearTypeNatural
+    ParentFont = False
+    TabOrder = 1
+    Text = 'Edit1'
+  end
+  object btnAdicionar: TButton
+    Left = 344
+    Top = 44
+    Width = 75
+    Height = 30
+    Caption = 'Adicionar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    Font.Quality = fqClearTypeNatural
+    ParentFont = False
+    TabOrder = 2
+  end
+end

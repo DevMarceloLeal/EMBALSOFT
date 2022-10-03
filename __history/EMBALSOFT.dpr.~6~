@@ -1,0 +1,20 @@
+program EMBALSOFT;
+
+uses
+  Vcl.Forms,
+  View.Formulario.Principal in 'SOURCE\VIEW\View.Formulario.Principal.pas' {FrmPrincipal},
+  View.Frame.Cadastro in 'SOURCE\VIEW\View.Frame.Cadastro.pas' {FrameCadastros: TFrame},
+  View.Frame.Consulta in 'SOURCE\VIEW\View.Frame.Consulta.pas' {FrameDados: TFrame},
+  View.Frame.Total in 'SOURCE\VIEW\View.Frame.Total.pas' {FrameTotal: TFrame},
+  Vcl.Themes,
+  Vcl.Styles;
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Smokey Quartz Kamri');
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.Run;
+end.

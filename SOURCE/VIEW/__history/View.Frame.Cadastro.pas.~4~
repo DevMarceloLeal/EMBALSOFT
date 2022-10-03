@@ -1,0 +1,70 @@
+unit View.Frame.Cadastro;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.Variants,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.StdCtrls,
+  Vcl.Grids,
+  Vcl.DBGrids,
+  Vcl.Buttons,
+  Vcl.ExtCtrls,
+  Auxiliar.Forms,
+  Auxiliar.Conversoes,
+  Auxiliar.Controller.Global,
+  Auxiliar.Variaveis.Globais;
+
+type
+  TFrameCadastros = class(TFrame)
+    Label1: TLabel;
+    Label2: TLabel;
+    edtCodigo: TEdit;
+    edtDescricao: TEdit;
+    btnAdicionar: TButton;
+    procedure edtCodigoKeyPress(Sender: TObject; var Key: Char);
+    procedure btnAdicionarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    constructor Create(AOwner: TComponent) ; override;
+    destructor Destroy; override;
+  end;
+
+implementation
+
+{$R *.dfm}
+
+constructor TFrameCadastros.Create(AOwner: TComponent);
+begin
+  inherited;
+  edtCodigo.OnKeyPress    := edtCodigoKeyPress;
+  btnAdicionar.Hint       := 'Para adicionar um registro no grid';
+  btnAdicionar.OnClick    := btnAdicionarClick;
+end;
+
+destructor TFrameCadastros.Destroy;
+begin
+  inherited;
+end;
+
+procedure TFrameCadastros.edtCodigoKeyPress(Sender: TObject; var Key: Char);
+begin
+  if not (CharInSet(Key, ['0'..'9'])) then
+     Key := #0;
+end;
+
+procedure TFrameCadastros.btnAdicionarClick(Sender: TObject);
+begin
+//  gControle.Operacoes.Formulario(Self).EfetuarLancamentos;
+end;
+
+end.
